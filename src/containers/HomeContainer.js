@@ -25,11 +25,4 @@ import CustomersActions from '../components/CustomersActions'
   }
 }
 
-/*
-<Link to='/'>Home</Link><br />
-
-<Link to='/customers/3000'>Customer</Link><br />
-<Link to='/customers/new'>New</Link><br />
-*/
-
 export default withRouter(HomeContainer)
