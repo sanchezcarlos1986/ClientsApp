@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { fetchCustomers } from '../actions/fetchCustomers'
 import CustomersActions from '../components/CustomersActions'
 import CustomersList from '../components/CustomersList'
+import { getCustomers } from '../selectors/customers';
 
 class CustomersContainer extends Component {
   componentDidMount = () => {
@@ -48,7 +49,7 @@ CustomersContainer.defaultProps = {
 // })
 
 const mapStateToProps = state => ({
-  customers: state.customers
+  customers: getCustomers(state)
 })
 
 const mapDispatchToProps = { fetchCustomers }
